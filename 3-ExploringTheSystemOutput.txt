@@ -1,1 +1,132 @@
 
+~/command-line-1-4-KyleVanderwall$ ls
+1-WhatIsTheShell.txt
+2-Navigation.txt
+3-ExploringTheSystemOutput.txt
+4-ManipulatingFilesAndDirectories.txt
+README.md
+~/command-line-1-4-KyleVanderwall$ ls /usr
+bin  games    lib    libexec  sbin   src
+doc  include  lib32  local    share
+~/command-line-1-4-KyleVanderwall$ cd ~ /usr
+bash: cd: too many arguments
+~/command-line-1-4-KyleVanderwall$ ls ~ /usr
+/home/runner:
+command-line-1-4-KyleVanderwall  _test_runner.py
+
+/usr:
+bin  games    lib    libexec  sbin   src
+doc  include  lib32  local    share
+~/command-line-1-4-KyleVanderwall$ ls -1
+1-WhatIsTheShell.txt
+2-Navigation.txt
+3-ExploringTheSystemOutput.txt
+4-ManipulatingFilesAndDirectories.txt
+README.md
+~/command-line-1-4-KyleVanderwall$ cd /usr
+/usr$ ls -1
+bin
+doc
+games
+include
+lib
+lib32
+libexec
+local
+sbin
+share
+src
+/usr$ ls -1
+bin
+doc
+games
+include
+lib
+lib32
+libexec
+local
+sbin
+share
+src
+/usr$ ls - 1
+ls: cannot access '-': No such file or directory
+ls: cannot access '1': No such file or directory
+/usr$ ls -1
+bin
+doc
+games
+include
+lib
+lib32
+libexec
+local
+sbin
+share
+src
+/usr$ 
+/usr$ ls -l
+total 44
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 bin
+drwxr-xr-x 3 root root 4096 Jan 27 00:58 doc
+drwxr-xr-x 2 root root 4096 Apr 24  2018 games
+drwxr-xr-x 1 root root 4096 Apr 19  2019 include
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 lib
+drwxr-xr-x 3 root root 4096 Jan 27 00:56 lib32
+drwxr-xr-x 3 root root 4096 Apr 19  2019 libexec
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 local
+drwxr-xr-x 1 root root 4096 Jan 27 00:58 sbin
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 share
+drwxr-xr-x 1 root root 4096 Jan 27 00:57 src
+/usr$ cd
+~$ ls -l
+total 4
+drwxr-xr-x 1 runner runner 246 Feb  9 21:03 command-line-1-4-KyleVanderwall
+-rw-r--r-- 1 root   root   579 Jan 27 00:50 _test_runner.py
+~$ ls -lt
+total 4
+drwxr-xr-x 1 runner runner 246 Feb  9 21:03 command-line-1-4-KyleVanderwall
+-rw-r--r-- 1 root   root   579 Jan 27 00:50 _test_runner.py
+~$ cd /usr
+/usr$ ls -lt
+total 44
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 local
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 bin
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 share
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 lib
+drwxr-xr-x 1 root root 4096 Jan 27 00:58 sbin
+drwxr-xr-x 3 root root 4096 Jan 27 00:58 doc
+drwxr-xr-x 1 root root 4096 Jan 27 00:57 src
+drwxr-xr-x 3 root root 4096 Jan 27 00:56 lib32
+drwxr-xr-x 3 root root 4096 Apr 19  2019 libexec
+drwxr-xr-x 1 root root 4096 Apr 19  2019 include
+drwxr-xr-x 2 root root 4096 Apr 24  2018 games
+/usr$ ls -lt --reverse
+total 44
+drwxr-xr-x 2 root root 4096 Apr 24  2018 games
+drwxr-xr-x 1 root root 4096 Apr 19  2019 include
+drwxr-xr-x 3 root root 4096 Apr 19  2019 libexec
+drwxr-xr-x 3 root root 4096 Jan 27 00:56 lib32
+drwxr-xr-x 1 root root 4096 Jan 27 00:57 src
+drwxr-xr-x 3 root root 4096 Jan 27 00:58 doc
+drwxr-xr-x 1 root root 4096 Jan 27 00:58 sbin
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 lib
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 share
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 bin
+drwxr-xr-x 1 root root 4096 Jan 27 01:34 local
+/usr$ ls -a
+.   bin  games    lib    libexec  sbin   src
+..  doc  include  lib32  local    share
+/usr$ ls -A
+bin  games    lib    libexec  sbin   src
+doc  include  lib32  local    share
+/usr$ ls
+bin  games    lib    libexec  sbin   src
+doc  include  lib32  local    share
+/usr$ ls -d
+.
+/usr$ ls -S
+bin  games    lib    libexec  sbin   src
+doc  include  lib32  local    share
+/usr$ ls -F
+bin/  doc/  games/  include/  lib/  lib32/  libexec/  local/  sbin/  share/  src/
+/usr$ 
