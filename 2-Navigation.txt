@@ -1,1 +1,26 @@
+# Concepts Addressed: Shell, Prompt, Directory. 
+~$ pwd
+/home/runner
+~$ ls
+command-line-1-4-lucca001  _test_runner.py
+~$ cd /usr/bin
+/usr/bin$ cd bin
+bash: cd: bin: No such file or directory
+/usr/bin$ cd ..
+/usr$ ls
+bin  doc  games  include  lib  lib32  libexec  local  sbin  share  src
+/usr$ cd bin
+/usr/bin$ cd ..
+/usr$ 
+/usr$ cd ./bin
+/usr/bin$ cd -
+/usr
+/usr$ cd ~
+~$ pwd
+/home/runner
+~$ cd
+~$ pwd
+/home/runner
+~$ exit
+exit
 
